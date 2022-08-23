@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB -->
     <link rel="stylesheet" href="static/css/mdb.min.css" />
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="static/css/style.css" />
+    <!-- Custom styles>
+    <link rel="stylesheet" href="static/css/style.css" / -->
 </head>
 <body>
       <!--Main Navigation-->
@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#intro">Welcome to the Transnational Bulletin!</a>
+              <a class="nav-link" aria-current="page">Blurring the Borders</a>
             </li>
             <!--li class="nav-item">
               <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow"
@@ -89,12 +89,9 @@
 
     <!-- Jumbotron -->
     <div id="intro" class="p-5 text-center bg-light">
-      <h1 class="mb-3 h2">Learn Bootstrap 5 with MDB</h1>
-      <p class="mb-3">Best & free guide of responsive web design</p>
-      <a class="btn btn-primary m-2" href="https://www.youtube.com/watch?v=c9B4TPnak1A" role="button" rel="nofollow"
-        target="_blank">Start tutorial</a>
-      <a class="btn btn-primary m-2" href="https://mdbootstrap.com/docs/standard/" target="_blank"
-        role="button">Download MDB UI KIT</a>
+      <h1 class="mb-3 h2">Welcome to the Transnational Bulletin!</h1>
+      <p class="mb-3">The Transnational Bulletin is here to serve you the crispiest bits of news from around the globe, translated into English from a multitude of languages.<br>
+        Get your daily dose of news delivered to you right at your device-step.</p>
     </div >
     <!-- Jumbotron -->
   </header>
@@ -133,112 +130,39 @@
       <section>
         <div class="row gx-5">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <!-- News block -->
             <div>
-              <!-- Featured image -->
               <div class="bg-image hover-overlay shadow-1-strong ripple mb-4" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/fluid/city/113.jpg" class="img-fluid" />
-                <a href="#!">
+                <img src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2021/06/18/2672311-118219204.jpg?itok=3A0wJYUb" class="img-fluid" />
+                <a>
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
               </div>
-
-              <!-- Article data -->
               <div class="row mb-3">
                 <div class="col-6">
-                  <a href="" class="text-info">
-                    <i class="fas fa-plane"></i>
-                    Travels
+                  <a class="text-info">
+                    <i class="flag flag-saudi-arabia"></i>Saudi Arabia
                   </a>
                 </div>
-
-                <div class="col-6 text-end">
-                  <u> 15.07.2020</u>
-                </div>
               </div>
-
-              <!-- Article title and description -->
-              <a href="" class="text-dark">
-                <h5>This is title of the news</h5>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iste aliquid. Sed
-                  id nihil magni, sint vero provident esse numquam perferendis ducimus dicta
-                  adipisci iusto nam temporibus modi animi laboriosam?
-                </p>
+              <a href="{{arabic_main.url}}" class="text-dark">
+                <h5>{{arabic_main.Eng_Title}}</h5>
+                <p>{{arabic_main.Eng_Des}}</p>
               </a>
-
               <hr />
 
-              <!-- News -->
-              <a href="" class="text-dark">
+              {% for news in arabic_list %}
+              <a href="{{news.url}}" class="text-dark">
                 <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/041.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
                   <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
+                    <p class="mb-2"><strong>{{news.Eng_Title}}</strong></p>
                     <p>
-                      <u> 15.07.2020</u>
+                      <p>{{news.Title}}</p>
                     </p>
                   </div>
                 </div>
               </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/042.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/043.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
+              {% endfor %}
             </div>
-            <!-- News block -->
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
@@ -246,108 +170,39 @@
             <div>
               <!-- Featured image -->
               <div class="bg-image hover-overlay shadow-1-strong ripple mb-4" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/fluid/city/011.jpg" class="img-fluid" />
-                <a href="#!">
+                <img src="https://www.openaccessgovernment.org/wp-content/uploads/2020/02/dreamstime_xxl_125816003.jpg" class="img-fluid" />
+                <a>
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
               </div>
-
-              <!-- Article data -->
               <div class="row mb-3">
                 <div class="col-6">
-                  <a href="" class="text-danger">
-                    <i class="fas fa-chart-pie"></i>
-                    Business
+                  <a class="text-info">
+                    <i class="flag flag-argentina"></i>Argentina
                   </a>
                 </div>
-
-                <div class="col-6 text-end">
-                  <u> 15.07.2020</u>
-                </div>
               </div>
-
-              <!-- Article title and description -->
-              <a href="" class="text-dark">
-                <h5>This is title of the news</h5>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iste aliquid. Sed
-                  id nihil magni, sint vero provident esse numquam perferendis ducimus dicta
-                  adipisci iusto nam temporibus modi animi laboriosam?
-                </p>
+              <a href="{{spanish_main.url}}" class="text-dark">
+                <h5>{{spanish_main.Eng_Title}}</h5>
+                <p>{{spanish_main.Eng_Des}}</p>
               </a>
-
               <hr />
 
               <!-- News -->
-              <a href="" class="text-dark">
+              {% for news in spanish_list %}
+              <a href="{{news.url}}" class="text-dark">
                 <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/031.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
                   <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
+                    <p class="mb-2"><strong>{{news.Eng_Title}}</strong></p>
                     <p>
-                      <u> 15.07.2020</u>
+                      <p>{{news.Title}}</p>
                     </p>
                   </div>
                 </div>
               </a>
+              {% endfor %}
 
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/032.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/033.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/034.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
             </div>
-            <!-- News block -->
           </div>
 
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
@@ -355,109 +210,114 @@
             <div>
               <!-- Featured image -->
               <div class="bg-image hover-overlay shadow-1-strong ripple mb-4" data-mdb-ripple-color="light">
-                <img src="https://mdbootstrap.com/img/new/fluid/city/018.jpg" class="img-fluid" />
-                <a href="#!">
+                <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ik5EOocg6low/v1/1200x-1.jpg" class="img-fluid" />
+                <a>
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
               </div>
-
-              <!-- Article data -->
-              <div class="row mb-3">
-                <div class="col-6">
-                  <a href="" class="text-warning">
-                    <i class="fas fa-code"></i>
-                    Technology
-                  </a>
-                </div>
-
-                <div class="col-6 text-end">
-                  <u> 15.07.2020</u>
-                </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-6">
+                <a class="text-info">
+                  <i class="flag flag-france"></i>France
+                </a>
               </div>
-
-              <!-- Article title and description -->
-              <a href="" class="text-dark">
-                <h5>This is title of the news</h5>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, iste aliquid. Sed
-                  id nihil magni, sint vero provident esse numquam perferendis ducimus dicta
-                  adipisci iusto nam temporibus modi animi laboriosam?
-                </p>
-              </a>
-
+            </div>
+            <a href="{{french_main.url}}" class="text-dark">
+              <h5>{{french_main.Eng_Title}}</h5>
+              <p>{{french_main.Eng_Des}}</p>
+            </a>
               <hr />
 
               <!-- News -->
-              <a href="" class="text-dark">
+              {% for news in french_list %}
+              <a href="{{news.url}}" class="text-dark">
                 <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/011.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
                   <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
+                    <p class="mb-2"><strong>{{news.Eng_Title}}</strong></p>
                     <p>
-                      <u> 15.07.2020</u>
+                      <p>{{news.Title}}</p>
                     </p>
                   </div>
                 </div>
               </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/012.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/013.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- News -->
-              <a href="" class="text-dark">
-                <div class="row mb-4 border-bottom pb-2">
-                  <div class="col-3">
-                    <img src="https://mdbootstrap.com/img/new/standard/city/014.jpg"
-                      class="img-fluid shadow-1-strong rounded" alt="" />
-                  </div>
-
-                  <div class="col-9">
-                    <p class="mb-2"><strong>Lorem ipsum dolor sit amet</strong></p>
-                    <p>
-                      <u> 15.07.2020</u>
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- News block -->
+              {% endfor %}
           </div>
+        </div>
+
+        <div class="row gx-5">
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <div>
+              <div class="bg-image hover-overlay shadow-1-strong ripple mb-4" data-mdb-ripple-color="light">
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202208/bihar.bmp?KAYsOz6DMMIy0CCQosurDWn5Li0SA04Q&size=770:433" alt="Bihar CM takes oath" class="img-fluid" />
+                <a>
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <a class="text-info">
+                    <i class="flag flag-india"></i>India
+                  </a>
+                </div>
+              </div>
+              <a href="{{indian_main.url}}" class="text-dark">
+                <h5>{{indian_main.Eng_Title}}</h5>
+                <p>{{indian_main.Eng_Des}}</p>
+              </a>
+              <hr />
+
+              {% for news in indian_list %}
+              <a href="{{news.url}}" class="text-dark">
+                <div class="row mb-4 border-bottom pb-2">
+                  <div class="col-9">
+                    <p class="mb-2"><strong>{{news.Eng_Title}}</strong></p>
+                    <p>
+                      <p>{{news.Title}}</p>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <div>
+              <div class="bg-image hover-overlay shadow-1-strong ripple mb-4" data-mdb-ripple-color="light">
+                <img src="https://cdn.forbes.ru/forbes-static/760x428/new/2022/08/GettyImages-974302462-kopia-62f5177220446.webp" class="img-fluid" />
+                <a>
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <a class="text-info">
+                    <i class="flag flag-russia"></i>Russia
+                  </a>
+                </div>
+              </div>
+              <a href="{{russian_main.url}}" class="text-dark">
+                <h5>{{russian_main.Eng_Title}}</h5>
+                <p>{{russian_main.Eng_Des}}</p>
+              </a>
+              <hr />
+
+              {% for news in russian_list %}
+              <a href="{{news.url}}" class="text-dark">
+                <div class="row mb-4 border-bottom pb-2">
+                  <div class="col-9">
+                    <p class="mb-2"><strong>{{news.Eng_Title}}</strong></p>
+                    <p>
+                      <p>{{news.Title}}</p>
+                    </p>
+                  </div>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+
         </div>
       </section>
       <!--Section: Content-->
@@ -497,22 +357,21 @@
     <hr class="m-0" /-->
 
     <div class="text-center py-4 align-items-center">
-      <p>Follow MDB on social media</p>
-      <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" class="btn btn-primary m-1" role="button"
-        rel="nofollow" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://www.facebook.com/mdbootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
+      <p>This project was undertaken primarily for the purpose of exploring the underlying technologies used. The news articles displayed are not the views of the developers and are taken from open-source online avenues and hyperlinks have been included should an individual wish to access the source reports.
+        <br>The reports currently displayed are updated to 12th August, 2022. </p>
+      <p>If you wish to contact the developers: Muskaan Walia or Suvrat Arora, you can do so through the links given below. The GitHub repo has also been attached and any insights/feedback/edits are welcome.  
+      </p>
+      <a href="https://www.linkedin.com/in/muskaanwalia/" class="btn btn-primary m-1" role="button" rel="nofollow"
         target="_blank">
-        <i class="fab fa-facebook-f"></i>
+        Muskaan Walia
       </a>
-      <a href="https://twitter.com/MDBootstrap" class="btn btn-primary m-1" role="button" rel="nofollow"
-        target="_blank">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://github.com/mdbootstrap/mdb-ui-kit" class="btn btn-primary m-1" role="button" rel="nofollow"
+      <a href="https://github.com/MWalia10/The_Transnational_Bulletin" class="btn btn-primary m-1" role="button" rel="nofollow"
         target="_blank">
         <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/suvrat-arora/" class="btn btn-primary m-1" role="button" rel="nofollow"
+        target="_blank">
+        Suvrat Arora
       </a>
     </div>
 
@@ -526,7 +385,7 @@
   <!--Footer-->
     <!-- MDB -->
     <script type="text/javascript" src="static/js/mdb.min.js"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript" src="static/js/script.js"></script>
+    <!-- Custom scripts>
+    <script type="text/javascript" src="js/script.js"></script -->
 </body>
 </html>
