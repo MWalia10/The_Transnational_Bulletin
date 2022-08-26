@@ -4,7 +4,7 @@ The Transnational Bulletin endeavours to serve as one of the most holistic spots
 
 - Saudi Arabia (Arabic)
 - France (French)
-- India (English)
+- India (Hindi)
 - Russia (Russian)
 - Argentina (Spanish)
 
